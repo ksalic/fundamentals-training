@@ -1,0 +1,30 @@
+/content/documents/myhippoproject/configuration:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: 3461bcd2-6626-45be-b9fa-a0020bcdf1e1
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: b66f70cc-07dd-46d4-8f93-fc32958360ef
+  hippotranslation:locale: en
+  /categories:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: cd470b1b-2c59-4c3b-8344-c4efde3d84f1
+    /categories:
+      jcr:primaryType: selection:valuelist
+      jcr:mixinTypes: ['hippotranslation:translated', 'mix:referenceable']
+      jcr:uuid: 7b09a968-e238-481c-91d1-7a2ede3cdf76
+      hippo:availability: [live, preview]
+      hippotranslation:id: 37a51b25-ea6d-4567-a7d1-bfb937f46cd6
+      hippotranslation:locale: en
+      /selection:listitem[1]:
+        jcr:primaryType: selection:listitem
+        selection:key: food
+        selection:label: Food
+      /selection:listitem[2]:
+        jcr:primaryType: selection:listitem
+        selection:key: transport
+        selection:label: Transport
+      /selection:listitem[3]:
+        jcr:primaryType: selection:listitem
+        selection:key: solar
+        selection:label: Solar

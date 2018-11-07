@@ -1,0 +1,75 @@
+/content/documents/myhippoproject/products:
+  .meta:order-before: configuration
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippo:named', 'hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: 414a5ff7-6efb-4fe0-8ed6-0c3d939ac442
+  hippo:name: Products
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: f7fd73cc-335e-41bc-ad6d-07286a5984e7
+  hippotranslation:locale: en
+  /product-zero:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+    jcr:uuid: 7ef1cab4-b42a-4ac1-9aba-86b9e06ae5ff
+    hippo:name: product zero
+    /product-zero[1]:
+      jcr:primaryType: myhippoproject:product
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 05f1c165-ae18-42ea-8cf6-2e7feff70d10
+      hippo:availability: []
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2018-11-07T15:12:59.863+01:00
+      hippostdpubwf:lastModificationDate: 2018-11-07T15:12:59.863+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 8d1a3e28-71ba-4388-b983-e4acc72199af
+      hippotranslation:locale: en
+      myhippoproject:instock: 2
+      myhippoproject:introduction: introduction
+      myhippoproject:price: 12.5
+      myhippoproject:rating: 5.0
+      myhippoproject:title: Product Training
+      /myhippoproject:description:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>description</p>
+    /product-zero[2]:
+      jcr:primaryType: myhippoproject:product
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: a2c9304e-c78a-4a9b-a1a3-3fb81e58a2e3
+      hippo:availability: [preview]
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2018-11-07T15:12:59.863+01:00
+      hippostdpubwf:lastModificationDate: 2018-11-07T15:13:25.711+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 8d1a3e28-71ba-4388-b983-e4acc72199af
+      hippotranslation:locale: en
+      myhippoproject:instock: 2
+      myhippoproject:introduction: introduction
+      myhippoproject:price: 12.5
+      myhippoproject:rating: 5.0
+      myhippoproject:title: Product Training
+      /myhippoproject:description:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>description</p>
+    /product-zero[3]:
+      jcr:primaryType: myhippoproject:product
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: c1568b8d-00af-4500-a004-14161783f457
+      hippo:availability: [live]
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2018-11-07T15:12:59.863+01:00
+      hippostdpubwf:lastModificationDate: 2018-11-07T15:13:25.711+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2018-11-07T15:13:27.729+01:00
+      hippotranslation:id: 8d1a3e28-71ba-4388-b983-e4acc72199af
+      hippotranslation:locale: en
+      myhippoproject:instock: 2
+      myhippoproject:introduction: introduction
+      myhippoproject:price: 12.5
+      myhippoproject:rating: 5.0
+      myhippoproject:title: Product Training
+      /myhippoproject:description:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>description</p>
