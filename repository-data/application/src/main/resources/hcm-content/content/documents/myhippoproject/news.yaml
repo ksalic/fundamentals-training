@@ -24,18 +24,18 @@
         jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
         jcr:uuid: c580ac64-3874-4717-a6d9-e5ad72080abe
         hippo:name: The medusa news
-        /the-medusa-news:
+        /the-medusa-news[1]:
           jcr:primaryType: myhippoproject:newsdocument
           jcr:mixinTypes: ['mix:referenceable']
           jcr:uuid: dcb81908-6718-4c9c-91fd-547c7854b4fb
-          hippo:availability: [live, preview]
+          hippo:availability: [live]
           hippostd:holder: admin
           hippostd:state: published
           hippostdpubwf:createdBy: admin
           hippostdpubwf:creationDate: 2013-11-12T13:03:00+01:00
-          hippostdpubwf:lastModificationDate: 2013-11-12T13:04:00+01:00
+          hippostdpubwf:lastModificationDate: 2018-11-07T14:13:19.420+01:00
           hippostdpubwf:lastModifiedBy: admin
-          hippostdpubwf:publicationDate: 2013-11-12T13:04:00+01:00
+          hippostdpubwf:publicationDate: 2018-11-07T14:13:22.668+01:00
           hippotranslation:id: b72b426d-b271-48af-a969-96e47f4e09fc
           hippotranslation:locale: en
           myhippoproject:author: Alfred Anonymous
@@ -86,6 +86,138 @@
             hippo:facets: []
             hippo:modes: []
             hippo:values: []
+          /myhippoproject:geolocation:
+            jcr:primaryType: myhippoproject:geolocation
+            myhippoproject:latitude: '52.359356'
+            myhippoproject:longitude: '4.901615'
+        /the-medusa-news[2]:
+          jcr:primaryType: myhippoproject:newsdocument
+          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+          jcr:uuid: 4db06c6e-073d-4943-8e34-5ab750f27a8e
+          hippo:availability: [preview]
+          hippostd:state: unpublished
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2013-11-12T13:03:00+01:00
+          hippostdpubwf:lastModificationDate: 2018-11-07T14:13:19.420+01:00
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: b72b426d-b271-48af-a969-96e47f4e09fc
+          hippotranslation:locale: en
+          myhippoproject:author: Alfred Anonymous
+          myhippoproject:date: 2018-11-07T09:57:00+01:00
+          myhippoproject:documenttype: news
+          myhippoproject:introduction: Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum
+          myhippoproject:location: Rotterdam
+          myhippoproject:source: ''
+          myhippoproject:title: The medusa news
+          /myhippoproject:content:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <html>
+                        <body>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum </p>
+
+                        </body>
+                        </html>
+          /myhippoproject:image:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: 4709f797-61ae-4c36-93d4-63b5d50fc200
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /myhippoproject:geolocation:
+            jcr:primaryType: myhippoproject:geolocation
+            myhippoproject:latitude: '52.359356'
+            myhippoproject:longitude: '4.901615'
+        /the-medusa-news[3]:
+          jcr:primaryType: myhippoproject:newsdocument
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: 56bafe9d-a5e0-4477-874a-f49ed67634a9
+          hippo:availability: []
+          hippostd:state: draft
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2013-11-12T13:03:00+01:00
+          hippostdpubwf:lastModificationDate: 2018-11-07T14:13:02.482+01:00
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: b72b426d-b271-48af-a969-96e47f4e09fc
+          hippotranslation:locale: en
+          myhippoproject:author: Alfred Anonymous
+          myhippoproject:date: 2018-11-07T09:57:00+01:00
+          myhippoproject:documenttype: news
+          myhippoproject:introduction: Lorem ipsum dolor sit amet, consectetur adipisicing
+            elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+            Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi
+            ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit
+            in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur
+            sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+            mollit anim id est laborum
+          myhippoproject:location: Rotterdam
+          myhippoproject:source: ''
+          myhippoproject:title: The medusa news
+          /myhippoproject:content:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <html>
+                        <body>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+
+                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                        tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                        quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                        consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum
+                        dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident,
+                        sunt in culpa qui officia deserunt mollit anim id est laborum </p>
+
+                        </body>
+                        </html>
+          /myhippoproject:image:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: 4709f797-61ae-4c36-93d4-63b5d50fc200
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+          /myhippoproject:geolocation:
+            jcr:primaryType: myhippoproject:geolocation
+            myhippoproject:latitude: '52.359356'
+            myhippoproject:longitude: '4.901615'
       /2013-harvest:
         jcr:primaryType: hippo:handle
         jcr:mixinTypes: ['hippo:named', 'mix:referenceable']

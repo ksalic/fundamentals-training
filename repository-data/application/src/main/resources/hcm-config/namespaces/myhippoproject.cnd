@@ -13,6 +13,9 @@
 [myhippoproject:contentdocument] > hippostd:relaxed, hippotranslation:translated, myhippoproject:basedocument
   orderable
 
+[myhippoproject:geolocation] > hippo:compound, hippostd:relaxed
+  orderable
+
 [myhippoproject:newsdocument] > hippostd:relaxed, hippotranslation:translated, myhippoproject:basedocument
   orderable
 
