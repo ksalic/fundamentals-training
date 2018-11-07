@@ -18,34 +18,25 @@
 
             <div class="blog-span">
 
-              <#-- TODO 1: remove the fixed title and insert it dynamically -->
-              <h2>GoGreen Nominated for Award (Static Text)</h2>
+            <#-- TODO 1: remove the fixed title and insert it dynamically -->
+              <h2>${document.title}</h2>
 
-              <#-- TODO 2: remove the fixed introduction and insert it dynamically. -->
-              <p>GoGreen is Pleased to Announce its Nomination for a UNEF Sustainable Business Award.</p>
+            <#-- TODO 2: remove the fixed introduction and insert it dynamically. -->
+              <p>${document.introduction}</p>
 
-              <#-- TODO 3: remove the fixed content and insert it dynamically. Use the hst.html tag for that. -->
+            <#-- TODO 3: remove the fixed content and insert it dynamically. Use the hst.html tag for that. -->
               <div class="blog-post-body">
-                <p>New York-Nairobi. GoGreen is among 10 global businesses recognized by the United Nations
-                  Environmental Fund with a nomination for the prestigious Sustainable Business Award.
-                  According to
-                  the Sustainable Business Awards announcement, GoGreen has been nominated for its
-                  &ldquo;outstanding contributions to fighting climate change with its global corporate
-                  social
-                  responsibility strategy.&rdquo;</p>
-
-                <p>&ldquo;We&rsquo;re thrilled to be nominated for Sustainable Business Award&rdquo; notes
-                  GoGreen&rsquo;s CEO Robert Greene, &ldquo;we thoroughly respect the work of the UNEF and
-                  are proud
-                  to be listed among such visionary companies.&rdquo; Winners of the Sustainable Business
-                  Award will
-                  be announced at a ceremony in Nairobi this December.</p>
+                <@hst.html hippohtml=document.content />
               </div>
 
               <div class="blog-post-details">
               <#-- TODO 4: show the date from the current item. Copy it from the newslist-main-newslist.ftl -->
                 <div class="blog-post-details-item blog-post-details-item-left icon-calendar">
-                  <span class="date">22 October, 2015</span>
+                  <#if document.date??>
+                    <span class="date">
+                      <@fmt.formatDate value=document.date.time type="both" dateStyle="medium" timeStyle="short"/>
+                    </span>
+                  </#if>
                 </div>
 
               </div>
@@ -83,4 +74,3 @@
     </div>
   </div>
 </#if>
-
