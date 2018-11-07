@@ -6,6 +6,11 @@
 
 <#-- @ftlvariable name="document" type="org.example.beans.NewsDocument" -->
 <#if document??>
+    <@hst.link hippobean=document var="canonicalLink" canonical=true/>
+    <@hst.headContribution>
+ 	  <link rel="canonical" href="${canonicalLink}"/>
+    </@hst.headContribution>
+
   <div class="body-wrapper">
     <div class="container">
       <div class="row">
