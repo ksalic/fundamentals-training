@@ -1,0 +1,5 @@
+/hst:hst/hst:configurations/myhippoproject/hst:workspace/hst:sitemap/exercise-11-landing-page:
+  jcr:primaryType: hst:sitemapitem
+  hst:componentconfigurationid: hst:pages/exercise-11-landing-page-landingpage
+  hst:lastmodified: 2018-11-07T13:23:16.379+01:00
+  hst:pagetitle: exercise 11 landing page

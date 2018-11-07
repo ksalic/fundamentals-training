@@ -29,3 +29,6 @@ definitions:
       /twocolumns-right:
         jcr:primaryType: hst:template
         hst:renderpath: webfile:/freemarker/myhippoproject/twocolumns-right.ftl
+      /landingpage-main:
+        jcr:primaryType: hst:template
+        hst:renderpath: webfile:/freemarker/myhippoproject/landingpage-main.ftl

@@ -1,0 +1,14 @@
+definitions:
+  config:
+    /hst:hst/hst:configurations/myhippoproject/hst:prototypepages/landingpage:
+      jcr:primaryType: hst:component
+      hst:referencecomponent: hst:abstractpages/base
+      jcr:mixinTypes: ['hst:prototypemeta']
+      hst:displayname: Landing Page
+      /main:
+        jcr:primaryType: hst:component
+        hst:template: landingpage-main
+        /container:
+          jcr:primaryType: hst:containercomponent
+          hst:label: Landing Page Main
+          hst:xtype: hst.vbox
