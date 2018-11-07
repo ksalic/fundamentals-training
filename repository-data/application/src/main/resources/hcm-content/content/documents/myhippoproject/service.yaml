@@ -1,0 +1,69 @@
+/content/documents/myhippoproject/service:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: f11a2b26-29e9-4eb6-8be5-15234c59e2b3
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: 13fd3dd3-ebb3-46dc-99a8-2c0d779bb0d0
+  hippotranslation:locale: en
+  /about:
+    jcr:primaryType: hippo:handle
+    jcr:mixinTypes: ['mix:referenceable']
+    jcr:uuid: 109781c2-3ad0-4570-a1fe-7e9ce2dd739c
+    /about[1]:
+      jcr:primaryType: myhippoproject:contentdocument
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 366fa871-d0b4-476e-a6cd-b75dce07926a
+      hippo:availability: []
+      hippo:related___pathreference: []
+      hippostd:state: draft
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2018-11-07T10:47:40.126+01:00
+      hippostdpubwf:lastModificationDate: 2018-11-07T10:47:40.126+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 70be2df8-96e9-40a9-9ce0-67799818c8ba
+      hippotranslation:locale: en
+      myhippoproject:introduction: Hello Trainees
+      myhippoproject:publicationdate: 0001-01-01T13:00:00+01:00
+      myhippoproject:title: 'About the Training Exercise #8'
+      /myhippoproject:content:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>Hello Trainees</p>
+    /about[2]:
+      jcr:primaryType: myhippoproject:contentdocument
+      jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+      jcr:uuid: a090d7d2-0f69-41e7-8e16-c50fcf881efb
+      hippo:availability: [preview]
+      hippo:related___pathreference: []
+      hippostd:state: unpublished
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2018-11-07T10:47:40.126+01:00
+      hippostdpubwf:lastModificationDate: 2018-11-07T10:48:24.104+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippotranslation:id: 70be2df8-96e9-40a9-9ce0-67799818c8ba
+      hippotranslation:locale: en
+      myhippoproject:introduction: Hello Trainees
+      myhippoproject:publicationdate: 0001-01-01T13:00:00+01:00
+      myhippoproject:title: 'About the Training Exercise #8'
+      /myhippoproject:content:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>Hello Trainees</p>
+    /about[3]:
+      jcr:primaryType: myhippoproject:contentdocument
+      jcr:mixinTypes: ['mix:referenceable']
+      jcr:uuid: 39174fd0-169c-45a6-956d-de3f6712cd20
+      hippo:availability: [live]
+      hippo:related___pathreference: []
+      hippostd:state: published
+      hippostdpubwf:createdBy: admin
+      hippostdpubwf:creationDate: 2018-11-07T10:47:40.126+01:00
+      hippostdpubwf:lastModificationDate: 2018-11-07T10:48:24.104+01:00
+      hippostdpubwf:lastModifiedBy: admin
+      hippostdpubwf:publicationDate: 2018-11-07T10:48:26.543+01:00
+      hippotranslation:id: 70be2df8-96e9-40a9-9ce0-67799818c8ba
+      hippotranslation:locale: en
+      myhippoproject:introduction: Hello Trainees
+      myhippoproject:publicationdate: 0001-01-01T13:00:00+01:00
+      myhippoproject:title: 'About the Training Exercise #8'
+      /myhippoproject:content:
+        jcr:primaryType: hippostd:html
+        hippostd:content: <p>Hello Trainees</p>
