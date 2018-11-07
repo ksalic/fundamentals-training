@@ -48,7 +48,7 @@ definitions:
         hst:relativecontentpath: products
         /_any_.html:
           jcr:primaryType: hst:sitemapitem
-          hst:componentconfigurationid: hst:pages/newspage
+          hst:componentconfigurationid: hst:pages/productpage
           hst:relativecontentpath: ${parent}/${1}
         /_any_:
           jcr:primaryType: hst:sitemapitem
