@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+ * Copyright 2015-2016 Hippo B.V. (http://www.onehippo.com)
+ * Usage is prohibited except for people attending a training given or authorised by Hippo B.V., and only for that purpose.
+-->
+<sv:node xmlns:sv="http://www.jcp.org/jcr/sv/1.0" sv:name="productfacets">
+  <sv:property sv:name="jcr:primaryType" sv:type="Name">
+    <sv:value>hippofacnav:facetnavigation</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippo:docbase" sv:type="String">
+    <sv:value>ef0157e3-aade-42e3-bd77-37672e39f0aa</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippofacnav:facetnodenames" sv:type="String" sv:multiple="true">
+    <sv:value>Category</sv:value>
+    <sv:value>Price</sv:value>
+    <sv:value>Score</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippofacnav:facets" sv:type="String" sv:multiple="true">
+    <sv:value>myhippoproject:categories</sv:value>
+    <sv:value>myhippoproject:price$[{name:'$ 0 - $ 25', resolution:'double', end:25}, {name:'$ 25 - $ 50', resolution:'double', begin:25, end:50}, {name:'$ 50 - $ 100', resolution:'double', begin:50, end:100}, {name:'$ 100 - $ 250', resolution:'double', begin:100, end:250}, {name:'$ 250 - $ 500', resolution:'double', begin:250, end:500}, {name:'$ 500 and more', resolution:'double', begin:500}]</sv:value>
+    <sv:value>myhippoproject:rating$[{name:'1 star or more', resolution:'double', begin:1}, {name:'2 stars or more', resolution:'double', begin:2}, {name:'3 stars or more', resolution:'double', begin:3}, {name:'4 stars or more', resolution:'double', begin:4}, {name:'5 stars', resolution:'double', begin:5, end:6}]</sv:value>
+  </sv:property>
+  <sv:property sv:name="hippofacnav:filters" sv:type="String" sv:multiple="true">
+    <sv:value>jcr:primaryType=myhippoproject:product</sv:value>
+  </sv:property>
+</sv:node>

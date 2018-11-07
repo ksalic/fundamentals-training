@@ -12,3 +12,6 @@ definitions:
     /hst:hst/hst:configurations/hst:default/hst:templates/newslist-main-newslist:
       jcr:primaryType: hst:template
       hst:renderpath: webfile:/freemarker/hstdefault/newslist-main-newslist.ftl
+    /hst:hst/hst:configurations/hst:default/hst:templates/productlist-main:
+      jcr:primaryType: hst:template
+      hst:renderpath: webfile:/freemarker/hstdefault/productlist-main.ftl
