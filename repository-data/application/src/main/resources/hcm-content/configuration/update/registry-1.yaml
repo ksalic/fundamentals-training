@@ -1,0 +1,20 @@
+/hippo:configuration/hippo:update/hippo:registry/training remove obsolete configuration elements:
+  jcr:primaryType: hipposys:updaterinfo
+  hipposys:batchsize: 10
+  hipposys:description: After installing the training feature some hst configuration
+    elements that were added by Essentials are now obsolete. HST issues warnings for
+    those components. This script removes those components.
+  hipposys:dryrun: false
+  hipposys:parameters: ''
+  hipposys:query: /jcr:root/hst:hst/hst:configurations/myhippoproject/
+  hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n  \
+    \    \r\n      import org.onehippo.repository.update.BaseNodeUpdateVisitor\r\n\
+    \      import javax.jcr.Node\r\n      \r\n      class UpdaterTemplate extends\
+    \ BaseNodeUpdateVisitor {\r\n      \r\n      boolean doUpdate(Node node) {\r\n\
+    \      log.debug \"Updating node ${node.path}\"\r\n      \r\n      node.getNode(\"\
+    hst:abstractpages/base/top\").remove()\r\n      node.getNode(\"hst:abstractpages/base/footer/container\"\
+    ).remove()\r\n      node.getNode(\"hst:workspace/hst:containers/base\").remove()\r\
+    \n      \r\n      return true\r\n      }\r\n      \r\n      boolean undoUpdate(Node\
+    \ node) {\r\n      throw new UnsupportedOperationException('Updater does not implement\
+    \ undoUpdate method')\r\n      }\r\n      \r\n      }"
+  hipposys:throttle: 1000
