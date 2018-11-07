@@ -18,6 +18,13 @@
 
             <div class="blog-span">
 
+              <#if (document.image.featured)??>
+                  <@hst.link var="imgLink" hippobean=document.image.featured />
+                <div class="blog-post-featured-img">
+                  <img src="${imgLink}"/>
+                </div>
+              </#if>
+
             <#-- TODO 1: remove the fixed title and insert it dynamically -->
               <h2>${document.title}</h2>
 
@@ -74,3 +81,4 @@
     </div>
   </div>
 </#if>
+

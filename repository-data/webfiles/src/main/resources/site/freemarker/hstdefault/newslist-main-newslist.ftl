@@ -16,7 +16,6 @@
         <#-- TODO 1: Add a list iterator around the blog-post div to iterate over the pageable.items -->
         <#list pageable.items as item>
           <div class="blog-post">
-            <@hst.manageContent hippobean=item/>
           <#-- TODO 2: Create a link to the current item and store it a variable.
                        Use this variable down the code at the appropriate places. -->
             <@hst.link var="link" hippobean=item />
@@ -26,6 +25,14 @@
             </div>
 
             <div class="blog-span">
+
+            <#if (item.image.featured)??>
+                <@hst.link var="img" hippobean=item.image.featured />
+              <div class="blog-post-featured-img">
+                <img src="${img}"/>
+              </div>
+            </#if>
+
             <#-- TODO 3: Show the title of the current item. -->
               <h2>
                 <a href="${link}">${item.title?html}</a>
@@ -55,7 +62,7 @@
         </#list>
 
             <#if cparam.showPagination>
-              <#include "../include/pagination.ftl">
+                <#include "../include/pagination.ftl">
             </#if>
         </div>
       </div>

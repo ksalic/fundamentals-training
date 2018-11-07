@@ -9,6 +9,8 @@ definitions:
       new-content-document: Neues Content-Document
       new-news-document: Neue News
       new-news-folder: Neuer News-Ordner
+      new-myhippoproject-gogreenimageset-image: Neues Bild
+      new-myhippoproject-gogreenimageset-folder: Neuer Ordner
     /hippo:configuration/hippo:translations/hippo:templates/en:
       new-resource-bundle: new resource bundle
       new-untranslated-folder: new untranslated folder
@@ -18,6 +20,8 @@ definitions:
       new-content-document: new content document
       new-news-document: new news item
       new-news-folder: new news item folder
+      new-myhippoproject-gogreenimageset-image: New Image
+      new-myhippoproject-gogreenimageset-folder: new folder
     /hippo:configuration/hippo:translations/hippo:templates/fr:
       new-resource-bundle: nouveau resource bundle
       new-untranslated-folder: nouveau dossier non traduit
@@ -27,6 +31,8 @@ definitions:
       new-content-document: nouveau document contenu
       new-news-document: nouveau message d'info
       new-news-folder: nouveau dossier messages d'info
+      new-myhippoproject-gogreenimageset-image: Nouvelle image
+      new-myhippoproject-gogreenimageset-folder: un nouveau dossier
     /hippo:configuration/hippo:translations/hippo:templates/nl:
       new-resource-bundle: nieuwe resource bundle
       new-untranslated-folder: nieuwe onvertaalde map
@@ -36,3 +42,11 @@ definitions:
       new-content-document: nieuw content document
       new-news-document: nieuw nieuwsbericht
       new-news-folder: nieuwe nieuwsmap
+      new-myhippoproject-gogreenimageset-image: Nieuwe Afbeelding
+      new-myhippoproject-gogreenimageset-folder: nieuwe map
+    /hippo:configuration/hippo:translations/hippo:templates/es:
+      new-myhippoproject-gogreenimageset-image: Nueva imagen
+      new-myhippoproject-gogreenimageset-folder: nueva carpeta
+    /hippo:configuration/hippo:translations/hippo:templates/zh:
+      new-myhippoproject-gogreenimageset-image: 新图片
+      new-myhippoproject-gogreenimageset-folder: 新文件夹

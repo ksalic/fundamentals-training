@@ -3,6 +3,7 @@
 <'hippostd'='http://www.onehippo.org/jcr/hippostd/nt/2.0'>
 <'hippostdpubwf'='http://www.onehippo.org/jcr/hippostdpubwf/nt/1.0'>
 <'hippotranslation'='http://www.onehippo.org/jcr/hippotranslation/nt/1.0'>
+<'hippogallery'='http://www.onehippo.org/jcr/hippogallery/nt/2.0'>
 
 [myhippoproject:basedocument] > hippo:document, hippostd:publishableSummary, hippostdpubwf:document
   orderable
@@ -12,6 +13,8 @@
 
 [myhippoproject:contentdocument] > hippostd:relaxed, hippotranslation:translated, myhippoproject:basedocument
   orderable
+
+[myhippoproject:gogreenimageset] > hippogallery:imageset, hippogallery:relaxed
 
 [myhippoproject:newsdocument] > hippostd:relaxed, hippotranslation:translated, myhippoproject:basedocument
   orderable

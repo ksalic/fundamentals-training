@@ -2,14 +2,14 @@
   jcr:primaryType: hippogallery:stdImageGallery
   jcr:mixinTypes: ['mix:referenceable']
   jcr:uuid: 889e1e98-6bc5-4320-8d0b-31c8fedd9c5c
-  hippostd:foldertype: [new-image-folder]
-  hippostd:gallerytype: ['hippogallery:imageset']
+  hippostd:foldertype: [new-myhippoproject-gogreenimageset-folder]
+  hippostd:gallerytype: ['myhippoproject:gogreenimageset']
   /banner-1.jpg:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['mix:referenceable']
     jcr:uuid: 9e440e6d-e93a-4d5f-913b-9c3b0867c812
     /banner-1.jpg:
-      jcr:primaryType: hippogallery:imageset
+      jcr:primaryType: myhippoproject:gogreenimageset
       hippo:availability: [live, preview]
       hippogallery:filename: banner-1.jpg
       /hippogallery:thumbnail:
@@ -19,7 +19,7 @@
         hippogallery:width: 60
         jcr:data:
           type: binary
-          resource: /content/gallery/myhippoproject/banners/banner-1.jpg/banner-1_thumbnail.jpg
+          resource: /content/gallery/myhippoproject/banners/banner-1.jpg/banner-1.jpg/thumbnail/thumbnail.jpg
         jcr:lastModified: 2016-07-25T09:42:50.174+02:00
         jcr:mimeType: image/jpeg
       /hippogallery:original:
@@ -28,15 +28,24 @@
         hippogallery:width: 1170
         jcr:data:
           type: binary
-          resource: /content/gallery/myhippoproject/banners/banner-1.jpg/banner-1_original.jpg
+          resource: /content/gallery/myhippoproject/banners/banner-1.jpg/banner-1.jpg/original/original.jpg
         jcr:lastModified: 2016-07-25T09:42:50.174+02:00
+        jcr:mimeType: image/jpeg
+      /myhippoproject:featured:
+        jcr:primaryType: hippogallery:image
+        hippogallery:height: 141
+        hippogallery:width: 663
+        jcr:data:
+          type: binary
+          resource: /content/gallery/myhippoproject/banners/banner-1.jpg/banner-1.jpg/featured/featured.jpg
+        jcr:lastModified: 2018-11-07T10:42:34.544+01:00
         jcr:mimeType: image/jpeg
   /banner-2.jpg:
     jcr:primaryType: hippo:handle
     jcr:mixinTypes: ['mix:referenceable']
     jcr:uuid: dc6c2247-d3f4-4be0-976e-749b69927eee
     /banner-2.jpg:
-      jcr:primaryType: hippogallery:imageset
+      jcr:primaryType: myhippoproject:gogreenimageset
       hippo:availability: [live, preview]
       hippogallery:filename: banner-2.jpg
       /hippogallery:thumbnail:
@@ -46,7 +55,7 @@
         hippogallery:width: 60
         jcr:data:
           type: binary
-          resource: /content/gallery/myhippoproject/banners/banner-2.jpg/banner-2_thumbnail.jpg
+          resource: /content/gallery/myhippoproject/banners/banner-2.jpg/banner-2.jpg/thumbnail/thumbnail.jpg
         jcr:lastModified: 2016-07-25T09:42:50.558+02:00
         jcr:mimeType: image/jpeg
       /hippogallery:original:
@@ -55,6 +64,15 @@
         hippogallery:width: 1170
         jcr:data:
           type: binary
-          resource: /content/gallery/myhippoproject/banners/banner-2.jpg/banner-2_original.jpg
+          resource: /content/gallery/myhippoproject/banners/banner-2.jpg/banner-2.jpg/original/original.jpg
         jcr:lastModified: 2016-07-25T09:42:50.558+02:00
+        jcr:mimeType: image/jpeg
+      /myhippoproject:featured:
+        jcr:primaryType: hippogallery:image
+        hippogallery:height: 141
+        hippogallery:width: 663
+        jcr:data:
+          type: binary
+          resource: /content/gallery/myhippoproject/banners/banner-2.jpg/banner-2.jpg/featured/featured.jpg
+        jcr:lastModified: 2018-11-07T10:42:34.474+01:00
         jcr:mimeType: image/jpeg

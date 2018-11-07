@@ -106,3 +106,5 @@ definitions:
         myhippoproject:location: Lieu
         myhippoproject:source: Source
         myhippoproject:title: Titre
+    /hippo:configuration/hippo:translations/hippo:types/myhippoproject:gogreenimageset:
+      jcr:primaryType: hipposys:resourcebundles
