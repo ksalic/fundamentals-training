@@ -1,0 +1,87 @@
+/hippo:configuration/hippo:update/hippo:registry/Create Product documents:
+  jcr:primaryType: hipposys:updaterinfo
+  hipposys:batchsize: 10
+  hipposys:description: Generates Product documents in every folder in the "Repository
+    path". The script uses parameters for the number of documents to create, the node
+    type, the property names and the categories to use.
+  hipposys:dryrun: false
+  hipposys:parameters: "{ \"howMany\" :  12 , \r\n\"categories\" : [\"food\",\"solar\"\
+    ,\"transport\"], \r\n\"nodeType\" : \"myhippoproject:product\",\r\n\"titleField\"\
+    \ : \"myhippoproject:title\", \r\n\"ratingField\" : \"myhippoproject:rating\"\
+    , \r\n\"categoriesField\" : \"myhippoproject:categories\", \r\n\"priceField\"\
+    \ : \"myhippoproject:price\", \r\n\"introductionField\" : \"myhippoproject:introduction\"\
+    , \r\n\"instockField\" : \"myhippoproject:instock\",\r\n\"descriptionNode\" :\
+    \ \"myhippoproject:description\" }"
+  hipposys:path: /content/documents/myhippoproject/products
+  hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n\r\n\
+    import org.hippoecm.repository.HippoStdNodeType\r\nimport org.hippoecm.repository.api.HippoNodeType\r\
+    \nimport org.onehippo.repository.update.BaseNodeUpdateVisitor\r\n\r\nimport javax.jcr.Node\r\
+    \n\r\nclass UpdaterTemplate extends BaseNodeUpdateVisitor {\r\n\r\n    String[]\
+    \ mixins = [\"mix:referenceable\", \"hippo:container\", \"hippo:derived\", \"\
+    hippostd:container\", \"hippostd:publishable\", \"hippostd:publishableSummary\"\
+    , \"hippostd:relaxed\", \"hippostdpubwf:document\", \"hippotranslation:translated\"\
+    ]\r\n    def userName\r\n    def rand\r\n    def lorem = \"Lorem ipsum dolor sit\
+    \ amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore\
+    \ et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco\
+    \ laboris nisi ut aliquip ex ea commodo consequat.\"\r\n    def lorem2 = \"<p>Lorem\
+    \ ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt\
+    \ ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation\
+    \ ullamco laboris nisi ut aliquip ex ea commodo consequat.</p><p>Duis aute irure\
+    \ dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla\
+    \ pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui\
+    \ officia deserunt mollit anim id est laborum.</p>\"\r\n\r\n    boolean doUpdate(Node\
+    \ node) {\r\n        if(node.isNodeType(\"hippostd:folder\")) {\r\n          \
+    \  log.debug \"Adding products to folder ${node.path}\"\r\n\r\n            1.upto(parametersMap[\"\
+    howMany\"], {\r\n                def newNodeName = \"product\" + it\r\n\r\n  \
+    \              if(node.hasNode(newNodeName)) {\r\n                    log.debug\
+    \ \"Node at ${node.path}/${newNodeName} already exists. Skipping this node.\"\r\
+    \n                    return\r\n                }\r\n\r\n                // create\
+    \ handle node\r\n                def newHandleNode = node.addNode(newNodeName,\
+    \ HippoNodeType.NT_HANDLE)\r\n                newHandleNode.addMixin(\"mix:referenceable\"\
+    )\r\n\r\n                // create product node\r\n                def newProductNode\
+    \ = newHandleNode.addNode(newNodeName, parametersMap[\"nodeType\"])\r\n      \
+    \          log.debug \"Creating Product at ${newProductNode.getPath()}\"\r\n \
+    \               for (mixin in mixins) {\r\n                    newProductNode.addMixin(mixin)\r\
+    \n                }\r\n\r\n                // cms data properties\r\n        \
+    \        newProductNode.setProperty(parametersMap[\"titleField\"], \"Product ${it}\"\
+    )\r\n                newProductNode.setProperty(parametersMap[\"ratingField\"\
+    ], rand.nextInt(6).doubleValue())\r\n\r\n                // add a random number\
+    \ of categories, but at least one\r\n                String[] allCategories =\
+    \ parametersMap[\"categories\"]\r\n                int catSize = allCategories.length\r\
+    \n                def categories = new ArrayList<String>()\r\n\r\n           \
+    \     for(category in allCategories) {\r\n                    if(rand.nextInt(3)\
+    \ == 1) {\r\n                        categories.add(category)\r\n            \
+    \        }\r\n                }\r\n\r\n                if(categories.size() ==\
+    \ 0) {\r\n                    categories.add(allCategories[rand.nextInt(catSize)])\r\
+    \n                }\r\n                String[] catArray = categories.toArray()\r\
+    \n                newProductNode.setProperty(parametersMap[\"categoriesField\"\
+    ], catArray)\r\n                double price = (rand.nextDouble() * 100).round(2)\r\
+    \n                newProductNode.setProperty(parametersMap[\"priceField\"], price)\r\
+    \n                newProductNode.setProperty(parametersMap[\"introductionField\"\
+    ], lorem)\r\n\r\n                // random instock number, but one in three must\
+    \ be set to 0\r\n                def long instock\r\n                if(it % 3\
+    \ == 0) {\r\n                    instock = 0l\r\n                } else {\r\n\
+    \                    instock = rand.nextInt(120).longValue()\r\n             \
+    \   }\r\n                newProductNode.setProperty(parametersMap[\"instockField\"\
+    ], instock)\r\n                def htmlNode = newProductNode.addNode(parametersMap[\"\
+    descriptionNode\"], \"hippostd:html\")\r\n                htmlNode.setProperty(\"\
+    hippostd:content\", lorem2)\r\n\r\n                // workflow properties\r\n\
+    \                String[] availability = [\"live\", \"preview\"]\r\n         \
+    \       newProductNode.setProperty(\"hippo:availability\", availability)\r\n \
+    \               newProductNode.setProperty(\"hippostd:stateSummary\", \"live\"\
+    )\r\n                newProductNode.setProperty(HippoStdNodeType.HIPPOSTD_STATE,\
+    \ HippoStdNodeType.PUBLISHED)\r\n                newProductNode.setProperty(\"\
+    hippostdpubwf:lastModifiedBy\", userName)\r\n                newProductNode.setProperty(\"\
+    hippostdpubwf:createdBy\", userName)\r\n                newProductNode.setProperty(\"\
+    hippostdpubwf:lastModificationDate\", Calendar.getInstance())\r\n            \
+    \    newProductNode.setProperty(\"hippostdpubwf:creationDate\", Calendar.getInstance())\r\
+    \n                newProductNode.setProperty(\"hippostdpubwf:publicationDate\"\
+    , Calendar.getInstance())\r\n                newProductNode.setProperty(\"hippotranslation:locale\"\
+    , \"en\")\r\n                newProductNode.setProperty(\"hippotranslation:id\"\
+    , UUID.randomUUID().toString())\r\n\r\n            })\r\n            return true\r\
+    \n        }\r\n\r\n        return false\r\n    }\r\n\r\n    boolean undoUpdate(Node\
+    \ node) {\r\n        throw new UnsupportedOperationException('Updater does not\
+    \ implement undoUpdate method')\r\n    }\r\n\r\n    void initialize(Session session)\
+    \ {\r\n        userName = session.getUserID();\r\n        rand = new Random()\r\
+    \n    }\r\n\r\n}"
+  hipposys:throttle: 1000

@@ -13,6 +13,12 @@
   <description>My Hippo Project Essentials</description>
   <dependencies>
     <dependency>
+      <groupId>org.onehippo.cms7.training.essentials</groupId>
+      <artifactId>new-content-section-feature</artifactId>
+      <version>${training.features.version}</version>
+    </dependency>
+
+    <dependency>
       <groupId>org.onehippo.cms7</groupId>
       <artifactId>hippo-essentials-dashboard</artifactId>
       <version>${essentials.version}</version>
