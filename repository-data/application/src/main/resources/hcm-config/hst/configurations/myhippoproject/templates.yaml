@@ -23,3 +23,9 @@ definitions:
       /newspage-main:
         jcr:primaryType: hst:template
         hst:renderpath: webfile:/freemarker/hstdefault/newspage-main.ftl
+      /twocolumns-main:
+        jcr:primaryType: hst:template
+        hst:renderpath: webfile:/freemarker/myhippoproject/twocolumns-main.ftl
+      /twocolumns-right:
+        jcr:primaryType: hst:template
+        hst:renderpath: webfile:/freemarker/myhippoproject/twocolumns-right.ftl

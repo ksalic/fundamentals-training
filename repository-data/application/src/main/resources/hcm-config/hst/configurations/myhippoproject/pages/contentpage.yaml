@@ -2,7 +2,12 @@ definitions:
   config:
     /hst:hst/hst:configurations/myhippoproject/hst:pages/contentpage:
       jcr:primaryType: hst:component
-      hst:referencecomponent: hst:abstractpages/base
+      hst:referencecomponent: hst:abstractpages/two-columns
       /main:
-        jcr:primaryType: hst:containercomponentreference
-        hst:referencecomponent: contentpage/main
+        jcr:primaryType: hst:component
+        /left:
+          jcr:primaryType: hst:containercomponentreference
+          hst:referencecomponent: contentpage/main
+        /right:
+          jcr:primaryType: hst:component
+          hst:template: twocolumns-right
