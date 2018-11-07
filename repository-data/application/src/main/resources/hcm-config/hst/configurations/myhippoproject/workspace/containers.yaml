@@ -56,3 +56,11 @@ definitions:
           jcr:primaryType: hst:containercomponent
           hst:label: News Page Main
           hst:xtype: hst.vbox
+      /productlist:
+        jcr:primaryType: hst:containercomponentfolder
+        /main:
+          .meta:residual-child-node-category: content
+          jcr:primaryType: hst:containercomponent
+          hst:label: Product List Main
+          hst:xtype: hst.vbox
+          hst:lastmodified: 2018-11-07T15:32:24.772+01:00

@@ -5,7 +5,8 @@
     path". The script uses parameters for the number of documents to create, the node
     type, the property names and the categories to use.
   hipposys:dryrun: false
-  hipposys:parameters: "{ \"howMany\" :  12 , \r\n\"categories\" : [\"food\",\"solar\"\
+  hipposys:loglevel: DEBUG
+  hipposys:parameters: "{ \"howMany\" :  20 , \r\n\"categories\" : [\"food\",\"solar\"\
     ,\"transport\"], \r\n\"nodeType\" : \"myhippoproject:product\",\r\n\"titleField\"\
     \ : \"myhippoproject:title\", \r\n\"ratingField\" : \"myhippoproject:rating\"\
     , \r\n\"categoriesField\" : \"myhippoproject:categories\", \r\n\"priceField\"\
