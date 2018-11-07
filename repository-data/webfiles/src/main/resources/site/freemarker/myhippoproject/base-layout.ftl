@@ -33,12 +33,12 @@
     <link rel='stylesheet' type='text/css' href="${link}">
 
     <!-- javascript. suggested alternative example -->
-    <#assign jsFiles = ['js/jquery-2.1.0.min.js', 'js/kanzi-menu.js']>
-    <#list jsFiles as file>
-      <script type="text/javascript" src="<@hst.webfile path=file />"></script>
-    </#list>
+    <#--<#assign jsFiles = ['js/jquery-2.1.0.min.js', 'js/kanzi-menu.js']>-->
+    <#--<#list jsFiles as file>-->
+      <#--<script type="text/javascript" src="<@hst.webfile path=file />"></script>-->
+    <#--</#list>-->
 
-    <@hst.headContributions xhtml=true/>
+    <@hst.headContributions categoryExcludes="htmlBodyEnd" xhtml=true/>
 
   </head>
   <body class="bgpattern-neutral">
@@ -143,6 +143,7 @@
       <@hst.include ref="footer"/>
     </div>
 
+    <@hst.headContributions categoryIncludes="htmlBodyEnd" xhtml=true/>
   </body>
 </html>
 
