@@ -1,0 +1,108 @@
+definitions:
+  config:
+    /hippo:configuration/hippo:translations/hippo:types/myhippoproject:bannerdocument:
+      jcr:primaryType: hipposys:resourcebundles
+      /en:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: Banner
+        myhippoproject:content: Content
+        myhippoproject:image: Image
+        myhippoproject:link: Link
+        myhippoproject:title: Title
+      /nl:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: Banner
+        myhippoproject:content: Inhoud
+        myhippoproject:image: Afbeelding
+        myhippoproject:link: Link
+        myhippoproject:title: Titel
+      /fr:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: Bannière
+        myhippoproject:content: Contenu
+        myhippoproject:image: Image
+        myhippoproject:link: Lien
+        myhippoproject:title: Titre
+      /de:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: Banner
+        myhippoproject:content: Inhalt
+        myhippoproject:image: Abbildung
+        myhippoproject:link: Link
+        myhippoproject:title: Titel
+    /hippo:configuration/hippo:translations/hippo:types/myhippoproject:contentdocument:
+      jcr:primaryType: hipposys:resourcebundles
+      /en:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: Simple Document
+        myhippoproject:content: Content
+        myhippoproject:introduction: Introduction
+        myhippoproject:publicationdate: Publication date
+        myhippoproject:title: Title
+      /nl:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: Eenvoudig Document
+        myhippoproject:content: Inhoud
+        myhippoproject:introduction: Introductie
+        myhippoproject:publicationdate: Publicatiedatum
+        myhippoproject:title: Titel
+      /fr:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: Document simple
+        myhippoproject:content: Contenu
+        myhippoproject:introduction: Introduction
+        myhippoproject:publicationdate: Date de publication
+        myhippoproject:title: Titre
+      /de:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: Einfaches Dokument
+        myhippoproject:content: Inhalt
+        myhippoproject:introduction: Einführung
+        myhippoproject:publicationdate: Publikationsdatum
+        myhippoproject:title: Titel
+    /hippo:configuration/hippo:translations/hippo:types/myhippoproject:newsdocument:
+      jcr:primaryType: hipposys:resourcebundles
+      /en:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: News Item
+        myhippoproject:author: Author
+        myhippoproject:content: Content
+        myhippoproject:date: Date
+        myhippoproject:image: Image
+        myhippoproject:introduction: Introduction
+        myhippoproject:location: Location
+        myhippoproject:source: Source
+        myhippoproject:title: Title
+      /nl:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: Nieuwsbericht
+        myhippoproject:author: Auteur
+        myhippoproject:content: Inhoud
+        myhippoproject:date: Datum
+        myhippoproject:image: Afbeelding
+        myhippoproject:introduction: Introductie
+        myhippoproject:location: Locatie
+        myhippoproject:source: Bron
+        myhippoproject:title: Titel
+      /de:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: News
+        myhippoproject:author: Verfasser
+        myhippoproject:content: Inhalt
+        myhippoproject:date: Datum
+        myhippoproject:image: Abbildung
+        myhippoproject:introduction: Einführung
+        myhippoproject:location: Standort
+        myhippoproject:source: Quelle
+        myhippoproject:title: Titel
+      /fr:
+        jcr:primaryType: hipposys:resourcebundle
+        jcr:name: Message d'info
+        myhippoproject:author: Auteur
+        myhippoproject:content: Contenu
+        myhippoproject:date: Date
+        myhippoproject:image: Image
+        myhippoproject:introduction: Introduction
+        myhippoproject:location: Lieu
+        myhippoproject:source: Source
+        myhippoproject:title: Titre
