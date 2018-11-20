@@ -1,0 +1,33 @@
+/hippo:configuration/hippo:update/hippo:registry/Training - clean up hst configuration:
+  jcr:primaryType: hipposys:updaterinfo
+  hipposys:batchsize: 10
+  hipposys:description: Removes unused nodes and structures from the default hst configuration.
+    This will make it easier to update this configuration in the console.
+  hipposys:dryrun: false
+  hipposys:parameters: ''
+  hipposys:query: //element(*,hst:hst)
+  hipposys:script: "package org.hippoecm.frontend.plugins.cms.admin.updater\r\n  \
+    \    \r\n      import org.onehippo.repository.update.BaseNodeUpdateVisitor\r\n\
+    \      import javax.jcr.Node\r\n      import javax.jcr.Property\r\n      \r\n\
+    \      class UpdaterTemplate extends BaseNodeUpdateVisitor {\r\n      \r\n   \
+    \   boolean doUpdate(Node node) {\r\n      \r\n      if(node.hasNode(\"hst:blueprints\"\
+    )) {\r\n      Node child = node.getNode(\"hst:blueprints\")\r\n      log.debug\
+    \ \"Removing node ${child.path}\"\r\n      child.remove()\r\n      }\r\n     \
+    \ \r\n      if(node.hasNode(\"hst:configurations/common\")) {\r\n      Node common\
+    \ = node.getNode(\"hst:configurations/common\")\r\n      log.debug \"Removing\
+    \ node ${common.path}\"\r\n      common.remove()\r\n      }\r\n      \r\n    \
+    \  if(node.hasNode(\"hst:configurations/myhippoproject\")) {\r\n      Node configuration\
+    \ = node.getNode(\"hst:configurations/myhippoproject\")\r\n      if(configuration.hasProperty(\"\
+    hst:inheritsfrom\")) {\r\n      Property prop = configuration.getProperty(\"hst:inheritsfrom\"\
+    )\r\n      log.debug \"Removing property ${prop.path}\"\r\n      prop.remove()\r\
+    \n      }\r\n      \r\n      def nodes = [\"hst:catalog\", \"hst:components\"\
+    ,  \"hst:sitemenus\"]\r\n      nodes.each {\r\n      if(configuration.hasNode(it))\
+    \ {\r\n      Node child = configuration.getNode(it)\r\n      log.debug \"Removing\
+    \ node ${child.path}\"\r\n      child.remove()\r\n      }\r\n      }\r\n     \
+    \ \r\n      if(configuration.hasNode(\"hst:prototypepages\")) {\r\n      Node\
+    \ child = configuration.getNode(\"hst:prototypepages\")\r\n      if (!child.hasNodes())\
+    \ {\r\n      log.debug \"Removing node ${child.path}\"\r\n      child.remove()\r\
+    \n      }\r\n      }\r\n      }\r\n      \r\n      return true\r\n      }\r\n\
+    \      \r\n      boolean undoUpdate(Node node) {\r\n      throw new UnsupportedOperationException('Updater\
+    \ does not implement undoUpdate method')\r\n      }\r\n      \r\n      }"
+  hipposys:throttle: 1000

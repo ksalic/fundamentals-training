@@ -1,0 +1,34 @@
+/hippo:configuration/hippo:update/hippo:registry/training-fix-translation-ids:
+  jcr:primaryType: hipposys:updaterinfo
+  hipposys:batchsize: 10
+  hipposys:description: Will find all nodes in the repository path with hippotranslation:id
+    properties and populate them so the new content tree works as a translation of
+    the existing English News items.
+  hipposys:dryrun: false
+  hipposys:parameters: ''
+  hipposys:path: /content/documents/mijnhippoproject
+  hipposys:script: "package org.hippoecm.frontend.plugins.cms.dev.updater\r\n\r\n\
+    import org.onehippo.repository.update.BaseNodeUpdateVisitor\r\nimport javax.jcr.Node\r\
+    \n\r\nclass UpdaterTemplate extends BaseNodeUpdateVisitor {\r\n\r\n    boolean\
+    \ doUpdate(Node node) {\r\n\r\n        if(node.hasProperty(\"hippotranslation:id\"\
+    )) {\r\n\r\n\r\n            def translationPath = node.getProperty(\"hippotranslation:id\"\
+    ).getString()\r\n            if(translationPath.startsWith(\"/content/documents\"\
+    )) {\r\n                log.debug \"Checking node ${node.path}\"\r\n\r\n\r\n \
+    \               def today = Calendar.getInstance()\r\n                def monthString\
+    \ = String.format(\"%02d\", today.get(Calendar.MONTH)+1)\r\n                translationPath\
+    \ = (translationPath =~ /\\{month\\}/).replaceFirst(monthString)\r\n         \
+    \       translationPath = (translationPath =~ /\\{year\\}/).replaceFirst(today.get(Calendar.YEAR).toString())\r\
+    \n\r\n                if(translationPath.contains(\"{subfolderpath}\")) {\r\n\
+    \                    def prefix = translationPath.substring(0, translationPath.indexOf(\"\
+    {subfolderpath}\"))\r\n                    def thisSubfolderPath = node.getPath().substring(node.getPath().lastIndexOf(\"\
+    /news\") + 6)\r\n                    translationPath = prefix + thisSubfolderPath\r\
+    \n                }\r\n\r\n                log.debug \"Translation path is ${translationPath}\"\
+    \r\n\r\n                def targetNode = node.getSession().getNode(translationPath)\r\
+    \n                if(targetNode.hasProperty(\"hippotranslation:id\")) {\r\n  \
+    \                  node.setProperty(\"hippotranslation:id\", targetNode.getProperty(\"\
+    hippotranslation:id\").getString())\r\n                    log.debug \"Updated\
+    \ node ${node.path}\"\r\n                    return true\r\n                }\r\
+    \n            }\r\n        }\r\n\r\n        return false\r\n    }\r\n\r\n    boolean\
+    \ undoUpdate(Node node) {\r\n        throw new UnsupportedOperationException('Updater\
+    \ does not implement undoUpdate method')\r\n    }\r\n\r\n}"
+  hipposys:throttle: 1000
