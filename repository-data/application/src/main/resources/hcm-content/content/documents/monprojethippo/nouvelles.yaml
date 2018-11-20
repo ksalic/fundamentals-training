@@ -1,0 +1,119 @@
+/content/documents/monprojethippo/nouvelles:
+  jcr:primaryType: hippostd:folder
+  jcr:mixinTypes: ['hippotranslation:translated', 'mix:versionable']
+  jcr:uuid: a5eb0d29-75f8-42b7-b524-0cd5757fdd46
+  hippostd:foldertype: [new-translated-folder, new-document]
+  hippotranslation:id: 83c00ede-da81-4555-9e84-30f476cde09e
+  hippotranslation:locale: fr
+  /2018:
+    jcr:primaryType: hippostd:folder
+    jcr:mixinTypes: ['hippotranslation:translated', 'mix:versionable']
+    jcr:uuid: 7ad28a16-4dd1-4fdc-a761-3c27d617a786
+    hippostd:foldertype: [new-translated-folder, new-document]
+    hippotranslation:id: 35818f4d-bd99-4a09-9ddd-5d876bfd2e1f
+    hippotranslation:locale: fr
+    /11:
+      jcr:primaryType: hippostd:folder
+      jcr:mixinTypes: ['hippotranslation:translated', 'mix:versionable']
+      jcr:uuid: b805ea5b-7e86-4829-9fa6-a3a69ed32cf5
+      hippostd:foldertype: [new-translated-folder, new-document]
+      hippotranslation:id: 4f4d03e1-0f0d-45e6-b298-20f10472b6c0
+      hippotranslation:locale: fr
+      /le-medusa:
+        jcr:primaryType: hippo:handle
+        jcr:mixinTypes: ['hippo:named', 'mix:referenceable']
+        jcr:uuid: 11364fa7-4528-41af-914b-e9791d4336ef
+        hippo:name: 'le medusa '
+        /le-medusa[1]:
+          jcr:primaryType: myhippoproject:newsdocument
+          jcr:mixinTypes: ['mix:referenceable']
+          jcr:uuid: ce23ef86-232e-4e56-99c1-14130538b7c9
+          hippo:availability: []
+          hippostd:state: published
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2014-10-10T13:07:37.537+02:00
+          hippostdpubwf:lastModificationDate: 2018-11-20T09:39:55.878+01:00
+          hippostdpubwf:lastModifiedBy: admin
+          hippostdpubwf:publicationDate: 2014-10-10T14:21:01.649+02:00
+          hippotranslation:id: b72b426d-b271-48af-a969-96e47f4e09fc
+          hippotranslation:locale: fr
+          myhippoproject:author: ''
+          myhippoproject:categories: ''
+          myhippoproject:date: 2014-10-10T13:12:00+02:00
+          myhippoproject:documenttype: news
+          myhippoproject:introduction: Veggies es bonus vobis, proinde vos postulo
+            essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon
+            azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley
+            shallot courgette tatsoi pea sprouts fava bean collard greens dandelion
+            okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+          myhippoproject:location: ''
+          myhippoproject:source: ''
+          myhippoproject:title: Het Medusa nieuws
+          /hippotranslation:translations:
+            jcr:primaryType: hippotranslation:translations
+          /myhippoproject:content:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p style="text-align:left">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.</p>
+                        <p style="text-align:left">&nbsp;</p>
+                        <p style="text-align:left">Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+                        <p style="text-align:left">&nbsp;</p>
+                        <p style="text-align:left">Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
+                        <p style="text-align:left">&nbsp;</p>
+                        <p style="text-align:left">Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce parsley jacama salsify.</p>
+                        <p style="text-align:left">&nbsp;</p>
+                        <p style="text-align:left">Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. Grape wattle seed kombu beetroot horseradish carrot squash brussels sprout chard.</p>
+                        <p style="text-align:left">&nbsp;</p>
+                        <p style="text-align:left">http://veggieipsum.com/</p>
+          /myhippoproject:image:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: 4709f797-61ae-4c36-93d4-63b5d50fc200
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
+        /le-medusa[2]:
+          jcr:primaryType: myhippoproject:newsdocument
+          jcr:mixinTypes: ['mix:referenceable', 'mix:versionable']
+          jcr:uuid: a796ad5d-2b0b-4ead-9b3d-7d93c1e5b08e
+          hippo:availability: [preview]
+          hippostd:state: unpublished
+          hippostdpubwf:createdBy: admin
+          hippostdpubwf:creationDate: 2014-10-10T13:07:37.537+02:00
+          hippostdpubwf:lastModificationDate: 2018-11-20T09:39:55.878+01:00
+          hippostdpubwf:lastModifiedBy: admin
+          hippotranslation:id: b72b426d-b271-48af-a969-96e47f4e09fc
+          hippotranslation:locale: fr
+          myhippoproject:author: ''
+          myhippoproject:categories: ''
+          myhippoproject:date: 2014-10-10T13:12:00+02:00
+          myhippoproject:documenttype: news
+          myhippoproject:introduction: Veggies es bonus vobis, proinde vos postulo
+            essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon
+            azuki bean garlic. Gumbo beet greens corn soko endive gumbo gourd. Parsley
+            shallot courgette tatsoi pea sprouts fava bean collard greens dandelion
+            okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.
+          myhippoproject:location: ''
+          myhippoproject:source: ''
+          myhippoproject:title: Het Medusa nieuws
+          /hippotranslation:translations:
+            jcr:primaryType: hippotranslation:translations
+          /myhippoproject:content:
+            jcr:primaryType: hippostd:html
+            hippostd:content: |-
+              <p style="text-align:left">Veggies es bonus vobis, proinde vos postulo essum magis kohlrabi welsh onion daikon amaranth tatsoi tomatillo melon azuki bean garlic.</p>
+                        <p style="text-align:left">&nbsp;</p>
+                        <p style="text-align:left">Gumbo beet greens corn soko endive gumbo gourd. Parsley shallot courgette tatsoi pea sprouts fava bean collard greens dandelion okra wakame tomato. Dandelion cucumber earthnut pea peanut soko zucchini.</p>
+                        <p style="text-align:left">&nbsp;</p>
+                        <p style="text-align:left">Turnip greens yarrow ricebean rutabaga endive cauliflower sea lettuce kohlrabi amaranth water spinach avocado daikon napa cabbage asparagus winter purslane kale. Celery potato scallion desert raisin horseradish spinach carrot soko. Lotus root water spinach fennel kombu maize bamboo shoot green bean swiss chard seakale pumpkin onion chickpea gram corn pea. Brussels sprout coriander water chestnut gourd swiss chard wakame kohlrabi beetroot carrot watercress. Corn amaranth salsify bunya nuts nori azuki bean chickweed potato bell pepper artichoke.</p>
+                        <p style="text-align:left">&nbsp;</p>
+                        <p style="text-align:left">Nori grape silver beet broccoli kombu beet greens fava bean potato quandong celery. Bunya nuts black-eyed pea prairie turnip leek lentil turnip greens parsnip. Sea lettuce lettuce water chestnut eggplant winter purslane fennel azuki bean earthnut pea sierra leone bologi leek soko chicory celtuce parsley jacama salsify.</p>
+                        <p style="text-align:left">&nbsp;</p>
+                        <p style="text-align:left">Celery quandong swiss chard chicory earthnut pea potato. Salsify taro catsear garlic gram celery bitterleaf wattle seed collard greens nori. Grape wattle seed kombu beetroot horseradish carrot squash brussels sprout chard.</p>
+                        <p style="text-align:left">&nbsp;</p>
+                        <p style="text-align:left">http://veggieipsum.com/</p>
+          /myhippoproject:image:
+            jcr:primaryType: hippogallerypicker:imagelink
+            hippo:docbase: 4709f797-61ae-4c36-93d4-63b5d50fc200
+            hippo:facets: []
+            hippo:modes: []
+            hippo:values: []
