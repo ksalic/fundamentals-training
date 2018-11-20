@@ -13,6 +13,7 @@ definitions:
           jcr:primaryType: hst:mount
           hst:homepage: root
           hst:mountpoint: /hst:hst/hst:sites/myhippoproject
+          hst:defaultresourcebundleid: essentials.pagination
           /nl:
             .meta:residual-child-node-category: content
             jcr:primaryType: hst:mount
