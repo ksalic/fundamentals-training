@@ -4,7 +4,7 @@
   hst:iconpath: images/catalog-component-icons/product-list.png
   hst:label: Product List
   hst:parameternames: [hideOutOfStock, path, documentTypes, sortOrder, sortField,
-    pageSize, showPagination, includeSubtypes]
-  hst:parametervalues: ['on', '', '', desc, '', '10', 'off', 'on']
+    pageSize, showPagination, includeSubtypes, org.hippoecm.hst.core.component.template]
+  hst:parametervalues: ['on', '', '', desc, '', '10', 'off', 'on', 'webfile:/freemarker/hstdefault/productlist-main/productlist-main-prices.ftl']
   hst:template: productlist-main
   hst:xtype: hst.item
