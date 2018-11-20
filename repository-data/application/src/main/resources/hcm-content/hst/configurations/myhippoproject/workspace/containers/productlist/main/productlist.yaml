@@ -1,6 +1,6 @@
 /hst:hst/hst:configurations/myhippoproject/hst:workspace/hst:containers/productlist/main/productlist:
   jcr:primaryType: hst:containeritemcomponent
-  hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsListComponent
+  hst:componentclassname: org.example.components.ProductListComponent
   hst:iconpath: images/catalog-component-icons/product-list.png
   hst:label: Product List
   hst:template: productlist-main
