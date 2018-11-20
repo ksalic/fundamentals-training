@@ -37,3 +37,10 @@ definitions:
         hst:label: Product List
         hst:template: productlist-main
         hst:xtype: hst.item
+      /productfacets:
+        jcr:primaryType: hst:containeritemcomponent
+        hst:componentclassname: org.onehippo.cms7.essentials.components.EssentialsFacetsComponent
+        hst:iconpath: images/catalog-component-icons/product-facets.png
+        hst:label: Product Facets
+        hst:template: productfacets-main
+        hst:xtype: hst.item

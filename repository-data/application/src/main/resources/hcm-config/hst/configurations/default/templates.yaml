@@ -15,3 +15,6 @@ definitions:
     /hst:hst/hst:configurations/hst:default/hst:templates/productlist-main:
       jcr:primaryType: hst:template
       hst:renderpath: webfile:/freemarker/hstdefault/productlist-main.ftl
+    /hst:hst/hst:configurations/hst:default/hst:templates/productfacets-main:
+      jcr:primaryType: hst:template
+      hst:renderpath: webfile:/freemarker/hstdefault/productfacets-main.ftl
