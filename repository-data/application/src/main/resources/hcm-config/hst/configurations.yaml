@@ -3,3 +3,9 @@ definitions:
     /hst:hst/hst:configurations:
       /myhippoproject:
         jcr:primaryType: hst:configuration
+        hst:inheritsfrom: [../common]
+      /common:
+        jcr:primaryType: hst:configuration
+      /mijnhippoproject:
+        jcr:primaryType: hst:configuration
+        hst:inheritsfrom: [../common]
