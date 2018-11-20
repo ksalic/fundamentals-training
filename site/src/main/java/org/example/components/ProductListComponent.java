@@ -13,23 +13,25 @@ import org.hippoecm.hst.content.beans.query.filter.Filter;
 import org.hippoecm.hst.core.component.HstRequest;
 import org.hippoecm.hst.core.parameters.ParametersInfo;
 import org.onehippo.cms7.essentials.components.EssentialsListComponent;
-import org.onehippo.cms7.essentials.components.info.EssentialsListComponentInfo;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-@ParametersInfo(type = EssentialsListComponentInfo.class)
+@ParametersInfo(type = ProductListComponentInfo.class)
 public class ProductListComponent extends EssentialsListComponent {
 
     private static Logger log = LoggerFactory.getLogger(ProductListComponent.class);
 
     @Override
     protected void contributeAndFilters(final List<BaseFilter> filters, final HstRequest request, final HstQuery query) {
-        try {
-            Filter filter = query.createFilter();
-            filter.addGreaterThan("myhippoproject:instock", 0);
-            filters.add(filter);
-        } catch (FilterException e) {
-            log.error("An exception occurred while trying to create a query filter for instock greater than zero: {}", e);
+        final ProductListComponentInfo paramInfo = getComponentParametersInfo(request);
+        if (paramInfo.isHideOutOfStock()) {
+            try {
+                Filter filter = query.createFilter();
+                filter.addGreaterThan("myhippoproject:instock", 0);
+                filters.add(filter);
+            } catch (FilterException e) {
+                log.error("An exception occurred while trying to create a query filter for instock greater than zero: {}", e);
+            }
         }
     }
 

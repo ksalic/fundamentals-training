@@ -7,6 +7,9 @@ package org.example.components;
 import org.hippoecm.hst.core.parameters.Parameter;
 import org.onehippo.cms7.essentials.components.info.EssentialsListComponentInfo;
 
-public interface ProductListComponentInfo {
+public interface ProductListComponentInfo extends EssentialsListComponentInfo {
+
+    @Parameter(name = "hideOutOfStock", required = false, displayName = "Hide out of stock items")
+    boolean isHideOutOfStock();
 
 }
